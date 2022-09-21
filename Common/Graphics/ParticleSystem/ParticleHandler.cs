@@ -15,7 +15,23 @@ using Terraria;
 
 namespace TheGrotto.Common.Graphics.ParticleSystem
 {
-    internal class ParticleHandler
+    public class ParticleHandler
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
