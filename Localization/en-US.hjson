@@ -1,0 +1,41 @@
+﻿Mods: {
+	TheGrotto: {
+		Configuration: {
+		
+		}
+
+		ItemName: {
+		
+		}
+
+
+		ItemTooltip: {
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		CustomWindowTitles: {
+			Title0: "musicman"
+			Title1: "Also try Calamity!"
+		}
+	
+	}
+}

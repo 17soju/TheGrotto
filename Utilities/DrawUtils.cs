@@ -108,7 +108,7 @@ namespace TheGrotto.Utilities
         /// <param name="i"></param>
         /// <param name="j"></param>
         /// <param name="spriteBatch"></param>
-        public static void TileDebugDraw(int i, int j, SpriteBatch spriteBatch)
+        /*public static void TileDebugDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
             int height = tile.TileFrameY == 36 ? 18 : 16;
@@ -144,6 +144,6 @@ namespace TheGrotto.Utilities
                     num34 = num226;
                 }
             }
-        }
+        }*/
     }
 }
