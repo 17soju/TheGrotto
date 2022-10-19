@@ -6,10 +6,22 @@
 
 		ItemName: {
 		
+		# Summon Weapons
+		VacPack: "VacPack"
+
+
+
 		}
 
 
 		ItemTooltip: {
+
+		# Summon Weapons
+		VacPack:
+		'''
+		Lets you vacuum up slimes, and shoot them at your foes
+		Shot slimes slow down hit enemies, and release various power-ups
+		'''
 		
 		}
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-using TheGrotto.Core;
+using TheGrotto;
 
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;

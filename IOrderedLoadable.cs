@@ -1,6 +1,6 @@
-﻿namespace TheGrotto.Core
+﻿namespace TheGrotto
 {
-	interface IOrderedLoadable
+    interface IOrderedLoadable
     {
         void Load();
         void Unload();

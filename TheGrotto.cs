@@ -1,11 +1,13 @@
 using Terraria.ModLoader;
 
-namespace TheGrotto.Core
+namespace TheGrotto
 {
     public class TheGrotto : Mod
     {
 
         public static TheGrotto Instance { get; set; }
+        public const string ModName = nameof(TheGrotto);
+        public const string ModPrefix = ModName + ":";
 
 
 

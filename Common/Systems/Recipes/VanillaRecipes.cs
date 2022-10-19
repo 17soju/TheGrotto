@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-using TheGrotto.Core;
+using TheGrotto;
 
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;
@@ -19,6 +19,7 @@ namespace TheGrotto.Common.Systems.Recipes
     public class VanillaRecipes : ModSystem
     {
 
+        //ALL OF THESE ARE SUBJECT TO CHANGE
 
         public void AddFledglingWingsRecipe()
         {
@@ -47,6 +48,18 @@ namespace TheGrotto.Common.Systems.Recipes
             recipe.AddIngredient(ItemID.Snowball, 50);
             recipe.AddIngredient(ItemID.FlinxFur, 5);
             recipe.AddIngredient(ItemID.SnowBlock, 30);
+            recipe.AddIngredient(ItemID.Bottle);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+        }
+
+        public void AddSanstormBottleRecipe()
+        {
+            Recipe recipe = Recipe.Create(ItemID.SandstorminaBottle);
+            recipe.AddIngredient(ItemID.SandBlock, 30);
+            recipe.AddIngredient(ItemID.AntlionMandible, 10);
+            recipe.AddIngredient(ItemID.Sandstone, 30);
+            recipe.AddIngredient(ItemID.DesertFossil, 5);
             recipe.AddIngredient(ItemID.Bottle);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();

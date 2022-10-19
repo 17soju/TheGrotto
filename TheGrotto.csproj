@@ -11,10 +11,10 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\Items\Weapons\Summon\" />
+    <Folder Include="Common\Bases\Items\" />
+    <Folder Include="Common\Bases\Tiles\" />
     <Folder Include="Common\Graphics\VerletSystem\" />
-    <Folder Include="Common\Bases\" />
     <Folder Include="Common\Systems\LootPools\" />
-    <Folder Include="Content\" />
-    <Folder Include="Assets\" />
   </ItemGroup>
 </Project>
