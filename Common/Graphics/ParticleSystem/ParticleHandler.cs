@@ -59,29 +59,6 @@ namespace TheGrotto.Common.Graphics.ParticleSystem
                 return;
             }
             spriteBatch.End();
-
-            if (additiveBlendingParticles.Count > 0)
-            {
-                spriteBatch.Begin();
-                foreach (Particle particle in additiveBlendingParticles)
-                {
-                    if (particle.UsesCustomDrawing)
-                    {
-                        particle.CustomDraw(spriteBatch);
-                        continue;
-                    }
-                    Rectangle frame = particleTextures[particle.Type].Frame(1, particle.FrameVariants, 0, particle.Variant); 
-                    spriteBatch.Draw(particleTextures[particle.Type], particle.Position - Main.screenPosition, frame, particle.Color, particle.Rotation, frame.Size() * 0.5f, particle.Scale, SpriteEffects.None, 0f);
-                }
-                spriteBatch.End();
-            }
-
         }
-
-        public static Texture2D GetTexture(int type)
-        {
-            return particleTextures[type];
-        }
-
     }
 }
