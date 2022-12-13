@@ -7,7 +7,9 @@ using Terraria.ID;
 
 namespace TheGrotto.Utilities
 {
-    public static partial class Helpers
+    // this shader loader is from slr i think so massive thanks to them for open sourcing their stuff and letting me use this
+    // this is super easy and way more effecient to use than loading shaders the "normal" way
+    public static partial class ShaderUtils  
     {
         public static bool HasParameter(this Effect effect, string parameterName)
         {

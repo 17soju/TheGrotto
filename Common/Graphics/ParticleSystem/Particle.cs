@@ -17,54 +17,51 @@ namespace TheGrotto.Common.Graphics.ParticleSystem
 {
     public class Particle
     {
+        #region stuff
+        /// <summary>
+        /// type of particle
+        /// </summary>
+        public int Type;
+        /// <summary>
+        /// represents the position of the particle
+        /// </summary>
+        public Vector2 Position;
+        /// <summary>
+        /// represents the origin of this particle
+        /// </summary>
+        public Vector2 Origin;
+        /// <summary>
+        /// color of particle
+        /// </summary>
+        public Color Color;
 
         /// <summary>
-        /// Position of your particle.
+        /// rotation of this particle
         /// </summary>
-        internal Vector2 Position;
-
+        public float Rotation;
         /// <summary>
-        /// Velocity of your particle.
+        /// scale of this particle
         /// </summary>
-        internal Vector2 Velocity;
-
+        public float Scale;
         /// <summary>
-        /// Rotation of your particle.
+        /// ???
         /// </summary>
-        internal float Rotation;
+        public int Variant;
+        #endregion
 
-        /// <summary>
-        /// Scale of your particle.
-        /// </summary>
-        internal float Scale;
-
-        /// <summary>
-        /// Represents the transparency of your particle.
-        /// </summary>
-        internal float Alpha;
-
-        /// <summary>
-        /// The color of your particle.
-        /// </summary>
-        internal Color Color;
-
-        /// <summary>
-        /// The texture of your particle.
-        /// </summary>
+        public virtual bool UsesCustomDrawing => false;
+        public virtual bool isImportant => false;
+        public virtual bool UseAdditiveBlending => false;
+        public virtual int FrameVariants => 1;
         public virtual string Texture => "";
 
-        /// <summary>
-        /// Current frame of your particle.
-        /// </summary>
-        internal Rectangle Frame;
+        public virtual void Update() { }
 
+        public void Kill() { ParticleHandler.KillParticle(this); }
+        //public void Spawn() { ParticleHandler.SpawnParticle(this); }
 
-
-
-
-
-
-
+        public virtual void CustomDraw(SpriteBatch spriteBatch) { }
+        public virtual void CustomDraw(SpriteBatch spriteBatch, Vector2 basePosition) { }
 
     }
 }

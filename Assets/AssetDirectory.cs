@@ -6,4 +6,7 @@
 
     public const string Weapons = Assets + "Items/Weapons/";
 
+
+    public const string NPCs = Assets + "NPCs/";
+
 } 

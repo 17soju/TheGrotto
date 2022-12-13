@@ -34,7 +34,7 @@ namespace TheGrotto.Common.Systems.Recipes
         {
             Recipe recipe = Recipe.Create(ItemID.Starfury); 
             recipe.AddIngredient(ItemID.Star, 10);
-            recipe.AddIngredient(ItemID.GoldBar, 5); 
+            recipe.AddRecipeGroup(RecipeGroupManager.GoldBar, 5); 
             recipe.AddIngredient(ItemID.Ruby);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();

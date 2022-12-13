@@ -15,7 +15,7 @@ using Terraria;
 
 namespace TheGrotto.Common.Graphics.PrimitiveSystem
 {
-    public class PrimitiveTrail
+    public class PrimitiveBatch
     {
 
 

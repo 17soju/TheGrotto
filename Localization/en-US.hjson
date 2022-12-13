@@ -1,6 +1,16 @@
 ﻿Mods: {
 	TheGrotto: {
 		Configuration: {
+
+		# Headers
+		GraphicsHeader: "Visuals"
+
+		# Settings
+
+		MaxParticles: {
+			Label: "Max Particles"
+			Tooltip: "Sets max amount of particles"
+		}
 		
 		}
 
@@ -28,7 +38,13 @@
 
 
 
-
+		MapIcons: {
+		
+		BaseBigTreeTile: "Big Tree"
+		
+		
+		
+		}
 
 
 
