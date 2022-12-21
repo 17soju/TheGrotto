@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework;
 using TheGrotto;
 using TheGrotto.Common.Core;
 using TheGrotto.Common.Config;
+using TheGrotto.Utilities;
 
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;
@@ -17,48 +18,27 @@ using Terraria;
 
 namespace TheGrotto.Common.Graphics.ParticleSystem
 {
-    //TODO: maybe rewrite this later on
-    // first particle sytem ive made entirely from scratch
     [Autoload(Side = ModSide.Client)]
-    public class ParticleHandler : IOrderedLoadable
-    {
-        private static List<Particle> particles;
-        private static List<Particle> additiveBlendingParticles;
-        private static List<Particle> particlesToKill;
-        internal static Dictionary<int, Texture2D> particleTextures; 
+    public class ParticleHandler : ModSystem, IOrderedLoadable
+    {              
+        public static List<Particle> particles;
+        public static List<Particle> additiveParticles;
+        public static List<Particle> particlesToKill;
 
-
-        public void Load() 
+        public override void Load()
         {
             particles = new List<Particle>();
-            additiveBlendingParticles = new List<Particle>();
+            additiveParticles = new List<Particle>();
+            particlesToKill = new List<Particle>();
         }
-        public void Unload()
+        public override void Unload()
         {
-            particles = new List<Particle>();
-            additiveBlendingParticles = new List<Particle>();
+            particles = null;
+            additiveParticles = null;
+            particlesToKill = null;
         }
 
-        public static void SpawnParticle(Particle particle)
-        {
-            if (!Main.gamePaused && (particles.Count < GraphicsConfig.Instance.MaxParticles || particle.isImportant))
-            {
-                particles.Add(particle);
-            }
-        }
 
-        public static void KillParticle(Particle particle)
-        {
-            particlesToKill.Add(particle);
-        }
-
-        public static void DrawParticles(SpriteBatch spriteBatch)
-        {
-            if (particles.Count == 0)
-            {
-                return;
-            }
-            spriteBatch.End();
-        }
+        
     }
 }

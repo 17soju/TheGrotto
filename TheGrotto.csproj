@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Assets\Items\Weapons\Summon\" />
     <Folder Include="Common\Bases\Items\" />
-    <Folder Include="Common\Graphics\VerletSystem\" />
     <Folder Include="Common\Systems\CustomWater\" />
   </ItemGroup>
 </Project>

@@ -37,7 +37,6 @@ namespace TheGrotto.Common.Systems
 
                 int sacrificeCount = 25;
 
-                #region stuff
 
                 if (isTile)
                 {
@@ -55,7 +54,6 @@ namespace TheGrotto.Common.Systems
                 {
                     sacrificeCount = 1;
                 }
-                #endregion stuff
 
                 CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[modItem.Type] = sacrificeCount;
             }
